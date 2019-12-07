@@ -41,7 +41,7 @@ Profiles REST API course code.
 ---
 
 - Enable our app in django setting:
-  - 1.  Open "profiles*project" and open up \_settings.py*
+  - 1.  Open "profiles_project" and open up \_settings.py\*
   - 2.  Add _rest_framework_, _rest_framework.authtoken_ and _profiles_api_, to the **INSTALLED_APPS** list.
 - Start a django development web server:
   - `(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py runserver 0.0.0.0:8000`
