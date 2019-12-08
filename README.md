@@ -12,6 +12,9 @@ Profiles REST API course code.
   - `profiles-rest-api git:(master) vagrant ssh`
 - - Disconnect from vagrant server:
   - `profiles-rest-api git:(master) exit`
+
+---
+
 - Create a python virtual environment:
   - `vagrant@ubuntu-bionic:~$ cd /vagrant/`
   - `vagrant@ubuntu-bionic:/vagrant$ python -m venv ~/env`
@@ -48,3 +51,9 @@ Profiles REST API course code.
   - In our Vagrantfile we mapped port 8000 on our host machine and that's why we specify port 8000 when we start the server
     - Check this code in the Vagrantfile: `config.vm.network "forwarded_port", guest: 8000, host: 8000`
     - Open a browser and go to http://127.0.0.1:8000/
+
+---
+
+- Create migration and sync database:
+  - `(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py makemigrations profiles_api`
+  - `(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py migrate`
